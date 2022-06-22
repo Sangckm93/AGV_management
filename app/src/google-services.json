@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "306465767785",
+    "firebase_url": "https://agv-management-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "agv-management",
     "storage_bucket": "agv-management.appspot.com"
   },
