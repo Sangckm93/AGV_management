@@ -1,4 +1,4 @@
-package vn.com.agv_management;
+package vn.com.agv_management.view;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -16,17 +16,17 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-import vn.com.agv_management.databinding.ActivityMainBinding;
+import vn.com.agv_management.databinding.ActivityScanBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class ScanActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
-    private ActivityMainBinding mainBinding;
+    private ActivityScanBinding mainBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mainBinding = ActivityMainBinding.inflate(getLayoutInflater());
+        mainBinding = ActivityScanBinding.inflate(getLayoutInflater());
         setContentView(mainBinding.getRoot());
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -39,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // Init intent Integrator
                 IntentIntegrator intentIntegrator = new IntentIntegrator(
-                        MainActivity.this
+                        ScanActivity.this
                 );
                 // Set prompt text
-                intentIntegrator.setPrompt("For Flash use volume up key");
+                intentIntegrator.setPrompt("Use volume up key to control Flash");
                 // Set beep
                 intentIntegrator.setBeepEnabled(true);
                 // Locked Screen rotate
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         if (intentResult.getContents() != null){
             // When result content is not null
             // Init alert dialog
-            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            AlertDialog.Builder builder = new AlertDialog.Builder(ScanActivity.this);
             // Set Titile
             builder.setTitle("Result");
             // Set Message

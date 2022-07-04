@@ -1,4 +1,4 @@
-package vn.com.agv_management;
+package vn.com.agv_management.view;
 
 import com.journeyapps.barcodescanner.CaptureActivity;
 

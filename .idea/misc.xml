@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Sang_Auto/Android/Project/AGV_management/app/src/main/res/layout/activity_home.xml" value="0.20104166666666667" />
         <entry key="..\:/Sang_Auto/Android/Project/AGV_management/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Sang_Auto/Android/Project/AGV_management/app/src/main/res/layout/activity_scan.xml" value="0.20104166666666667" />
       </map>
     </option>
   </component>
