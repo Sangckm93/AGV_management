@@ -76,8 +76,13 @@ public class ScanActivity extends AppCompatActivity {
                     dialogInterface.dismiss();
                 }
             });
-
             builder.show();
+
+//            Intent intent1 = new Intent(ScanActivity.this, HomeActivity.class);
+//            Bundle bundle = new Bundle();
+//            bundle.putString("Barcode result", intentResult.getContents());
+//            intent1.putExtras(bundle);
+//            startActivity(intent1);
 
         }else{
             Toast.makeText(this, "You did not scan anything", Toast.LENGTH_SHORT).show();

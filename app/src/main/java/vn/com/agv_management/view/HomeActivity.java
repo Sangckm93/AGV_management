@@ -5,12 +5,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import vn.com.agv_management.R;
+import vn.com.agv_management.databinding.ActivityHomeBinding;
 
 public class HomeActivity extends AppCompatActivity {
 
+    ActivityHomeBinding homeBinding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        homeBinding = ActivityHomeBinding.inflate(getLayoutInflater());
+        setContentView(homeBinding.getRoot());
+
+        Bundle bundle = getIntent().getExtras();
+        if (bundle == null){
+            return;
+        }
+        homeBinding.textView.setText(bundle.getString("Barcode result"));
     }
 }
