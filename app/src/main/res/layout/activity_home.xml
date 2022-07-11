@@ -21,4 +21,15 @@
         app:titleTextColor="@color/white"
         app:titleMarginStart="40dp"
         app:logo="@drawable/ic_menu"/>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="hello"
+        android:textSize="30sp"
+        android:textColor="@color/Blue"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

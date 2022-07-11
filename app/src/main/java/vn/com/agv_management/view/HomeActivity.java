@@ -25,6 +25,7 @@ public class HomeActivity extends AppCompatActivity {
             return;
         }
         Toast.makeText(HomeActivity.this, bundle.getString("Barcode_result"), Toast.LENGTH_SHORT).show();
+        homeBinding.textView.setText(bundle.get("Barcode_result").toString());
     }
 
     @Override
