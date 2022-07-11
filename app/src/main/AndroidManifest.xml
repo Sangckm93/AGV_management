@@ -16,7 +16,7 @@
         android:theme="@style/Theme.AGV_management"
         tools:targetApi="31">
         <activity
-            android:name=".HomeActivity"
+            android:name=".view.HomeActivity"
             android:exported="false" />
         <activity
             android:name=".view.ScanActivity"

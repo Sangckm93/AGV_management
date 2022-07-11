@@ -20,7 +20,7 @@ import vn.com.agv_management.databinding.ActivityScanBinding;
 
 public class ScanActivity extends AppCompatActivity {
 
-    private FirebaseAuth mAuth;
+//    private FirebaseAuth mAuth;
     private ActivityScanBinding mainBinding;
 
     @Override
@@ -29,10 +29,10 @@ public class ScanActivity extends AppCompatActivity {
         mainBinding = ActivityScanBinding.inflate(getLayoutInflater());
         setContentView(mainBinding.getRoot());
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message");
-
-        myRef.setValue("Hello, Scanner add dependency");
+//        FirebaseDatabase database = FirebaseDatabase.getInstance();
+//        DatabaseReference myRef = database.getReference("message");
+//
+//        myRef.setValue("Hello, Scanner add dependency");
 
         mainBinding.btnScan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,27 +62,27 @@ public class ScanActivity extends AppCompatActivity {
         IntentResult intentResult = IntentIntegrator.parseActivityResult(requestCode,resultCode,data);
         // Check condition
         if (intentResult.getContents() != null){
-            // When result content is not null
-            // Init alert dialog
-            AlertDialog.Builder builder = new AlertDialog.Builder(ScanActivity.this);
-            // Set Titile
-            builder.setTitle("Result");
-            // Set Message
-            builder.setMessage(intentResult.getContents());
-            // Set Possitive button
-            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    dialogInterface.dismiss();
-                }
-            });
-            builder.show();
+//            // When result content is not null
+//            // Init alert dialog
+//            AlertDialog.Builder builder = new AlertDialog.Builder(ScanActivity.this);
+//            // Set Titile
+//            builder.setTitle("Result");
+//            // Set Message
+//            builder.setMessage(intentResult.getContents());
+//            // Set Possitive button
+//            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+//                @Override
+//                public void onClick(DialogInterface dialogInterface, int i) {
+//                    dialogInterface.dismiss();
+//                }
+//            });
+//            builder.show();
 
-//            Intent intent1 = new Intent(ScanActivity.this, HomeActivity.class);
-//            Bundle bundle = new Bundle();
-//            bundle.putString("Barcode result", intentResult.getContents());
-//            intent1.putExtras(bundle);
-//            startActivity(intent1);
+            Intent intent1 = new Intent(this, HomeActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putString("Barcode_result", intentResult.getContents());
+            intent1.putExtras(bundle);
+            startActivity(intent1);
 
         }else{
             Toast.makeText(this, "You did not scan anything", Toast.LENGTH_SHORT).show();
