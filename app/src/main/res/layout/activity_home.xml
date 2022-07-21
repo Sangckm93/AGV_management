@@ -38,7 +38,9 @@
             android:id="@+id/navigationView"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            app:headerLayout="@layout/layout_heading_navigation"/>
+            app:headerLayout="@layout/layout_heading_navigation"
+            app:menu="@menu/menu_navigation"
+            android:layout_gravity="start"/>
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
