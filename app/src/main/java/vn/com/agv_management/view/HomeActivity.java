@@ -27,10 +27,9 @@ public class HomeActivity extends AppCompatActivity {
         Toast.makeText(HomeActivity.this, bundle.getString("Barcode_result"), Toast.LENGTH_SHORT).show();
         homeBinding.textView.setText(bundle.get("Barcode_result").toString());
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
+        getMenuInflater().inflate(R.menu.menu_toolbar, menu);
         return true;
     }
 }

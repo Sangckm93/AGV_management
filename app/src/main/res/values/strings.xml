@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AGV_management</string>
+    <string name="nav_spareparts">Spare Parts</string>
+    <string name="nav_Machines">Machines</string>
 </resources>

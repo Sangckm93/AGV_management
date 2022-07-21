@@ -6,4 +6,9 @@
         android:id="@+id/search"
         app:showAsAction="always"
         android:icon="@drawable/ic_search"/>
+    <item
+        android:title="sort"
+        android:id="@+id/sort"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_sort"/>
 </menu>
